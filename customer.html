@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Dashboard</h1>
+        <input type="text" id="searchTextField" class="search-box" placeholder="Search Menu">
+
+        <div class="menu">
+
+            <!-- Pizza -->
+            <div class="menu-item" data-name="Pizza" data-price="10">
+                <div class="item-info">
+                    <h2>Pizza</h2>
+                    <p>Price: <span class="price">£10.00</span></p>
+                    <p>Available: <span class="availability">15</span></p>
+                </div>
+                <div class="item-actions">
+                    <input type="number" class="quantity" placeholder="Quantity" min="1">
+                    <button class="add-button">Add</button>
+                </div>
+                <div class="item-options">
+                    <label><input type="checkbox" class="spicy-check"> Spicy +£2.00</label>
+                    <label><input type="checkbox" class="cheese-check"> Extra Cheese +£5.00</label>
+                </div>
+            </div>
+
+            <!-- Pasta -->
+            <div class="menu-item" data-name="Pasta" data-price="8">
+                <div class="item-info">
+                    <h2>Pasta</h2>
+                    <p>Price: <span class="price">£8.00</span></p>
+                    <p>Available: <span class="availability">10</span></p>
+                </div>
+                <div class="item-actions">
+                    <input type="number" class="quantity" placeholder="Quantity" min="1">
+                    <button class="add-button">Add</button>
+                </div>
+                <div class="item-options">
+                    <label><input type="checkbox" class="spicy-check"> Spicy +£2.00</label>
+                    <label><input type="checkbox" class="cheese-check"> Extra Cheese +£5.00</label>
+                </div>
+            </div>
+
+            <!-- Burger -->
+            <div class="menu-item" data-name="Burger" data-price="12.50">
+                <div class="item-info">
+                    <h2>Burger</h2>
+                    <p>Price: <span class="price">£12.50</span></p>
+                    <p>Available: <span class="availability">20</span></p>
+                </div>
+                <div class="item-actions">
+                    <input type="number" class="quantity" placeholder="Quantity" min="1">
+                    <button class="add-button">Add</button>
+                </div>
+                <div class="item-options">
+                    <label><input type="checkbox" class="spicy-check"> Spicy +£2.00</label>
+                    <label><input type="checkbox" class="cheese-check"> Extra Cheese +£5.00</label>
+                </div>
+            </div>
+
+            <!-- Sushi -->
+            <div class="menu-item" data-name="Sushi" data-price="50">
+                <div class="item-info">
+                    <h2>Sushi</h2>
+                    <p>Price: <span class="price">£10.00</span></p>
+                    <p>Available: <span class="availability">12</span></p>
+                </div>
+                <div class="item-actions">
+                    <input type="number" class="quantity" placeholder="Quantity" min="1">
+                    <button class="add-button">Add</button>
+                </div>
+                <div class="item-options">
+                    <label><input type="checkbox" class="spicy-check"> Spicy +£2.00</label>
+                    <label><input type="checkbox" class="cheese-check"> Extra Cheese +£5.00</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Cost Section -->
+        <div class="summary">
+            <p>Total Cost: <span id="totalCostLabel">£0.00</span></p>
+            <button id="placeOrderButton" class="action-button">Place Order</button>
+            <button id="resetButton" class="action-button reset">Reset</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
