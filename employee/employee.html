@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="top-pane">
+            <div class="stat-box">
+                <h2 id="customerCount">0</h2>
+                <p>Customers</p>
+            </div>
+            <div class="stat-box">
+                <h2 id="incomeAmount">£0.00</h2>
+                <p>Income</p>
+            </div>
+            <button id="backButton" class="action-button">Back</button>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-box">
+                <h3>Number of Orders</h3>
+                <canvas id="ordersChart" width="400" height="200"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Income</h3>
+                <canvas id="incomeChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script> 
+</body>
+</html>

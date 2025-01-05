@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signstyles.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <label for="role">Select Role:</label>
+            <select name="role" id="role">
+                <option value="customer">Customer</option>
+                <option value="employee">Employee</option>
+            </select>
+
+            <button type="submit" id="submitButton">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("signupForm");
+            const submitButton = document.getElementById("submitButton");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent default form submission
+
+                // Collect form data
+                const formData = new FormData(form);
+
+                // Send data to the server via AJAX (Fetch API)
+                fetch("signup.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);  // Log the server's response
+                    alert(data);  // Display the server response (success or error)
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

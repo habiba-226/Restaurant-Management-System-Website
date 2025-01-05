@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Role</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome! Please select your role:</h2>
+        <div class="role-selection">
+            <button id="customerBtn">Customer</button>
+            <button id="employeeBtn">Employee</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('customerBtn').addEventListener('click', function() {
+            window.location.href = "../customer/customer.html";
+        });
+
+        document.getElementById('employeeBtn').addEventListener('click', function() {
+            window.location.href = "../employee/employee.html"; 
+        });
+    </script>
+</body>
+</html>
