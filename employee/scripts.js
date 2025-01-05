@@ -84,5 +84,5 @@ updateCustomerData(30);
 
 
 document.getElementById('backButton').addEventListener('click', function() {
-  window.location.href = "../homepage/homepage.html";
+  window.location.href = "../index.html";
 });
